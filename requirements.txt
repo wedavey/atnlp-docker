@@ -1,0 +1,23 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+
+# base
+matplotlib
+nltk
+numpy
+pandas
+scikit-learn
+scipy
+setuptools
+#xgboost
+
+# deep-learning
+#gensim
+#keras
+#tensorflow
+
+# notebook
+#ipykernel
+#ipython
+#jupyter
+#notebook

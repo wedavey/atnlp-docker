@@ -6,9 +6,15 @@ matplotlib
 nltk
 numpy
 pandas
+pyyaml 
 scikit-learn
 scipy
-setuptools
+seaborn
+
+# unmanaged pandas dependency
+jinja2
+
+# extras
 #xgboost
 
 # deep-learning

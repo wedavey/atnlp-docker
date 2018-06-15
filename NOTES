@@ -2,16 +2,7 @@
 # NOTE: if we want to install keras, do it with no deps:
 # RUN pip install keras --no-deps (or try conda equiv)
 
-# If we want to remove conda-forge, need to: 
-# a) rebuild without any python or atnlp install
-# b) regenerate yml
-# c) rebuild the image
-
-
 TODO:
-* build with pip and avoid ssh key usage.
-* check in missing files
-* try and minimise image size
 * test deploy to docker
 * migrate to github ?
 * develop travis for auto deployment
@@ -21,14 +12,4 @@ TODO:
 # docker build -t atnlp .
 --> build and deploy to docker repo should be done in travis
 --> instruction to build locally should be given for development
-
-# Prepare reuters data
-# docker run -t --rm -v $(pwd)/data:/data atnlp /app/prep.sh
-(remove /app prefix?)
-
-# Train models 
-# docker run -t --rm -v $(pwd)/data:/data atnlp /app/train.sh
-
-# Evaluate models 
-# docker run -t --rm -v $(pwd)/data:/data atnlp /app/eval.sh
 

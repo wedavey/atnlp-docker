@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 PKLS=$(for MODEL in ${MODELS}; do echo ${DATADIR}/$MODEL.pkl; done | paste -s -d' ')
 cd $(mktemp -d)
-evaluate.py ${DATADIR}/data_train.txt ${DATADIR}/labels_train.txt ${PKLS}
+evaluate.py ${DATADIR}/data_test.txt ${DATADIR}/labels_test.txt ${PKLS}
 mv * ${DATADIR}

@@ -20,6 +20,17 @@ It uses the following technologies:
 
 ## Usage
 
+The following describes how to prepare input data, train and evaluate models
+and provide predictions on unseen data. 
+
+The set of models used throughout is controlled via 
+the `MODELS` environment variable. Set as follows when when running the docker container:  
+```bash
+docker run -e "MODELS=wordmatch svm" ...
+```   
+If not set a default model set will be chosen.
+
+
 ### Input data
 `atnlp-docker` expects the input data to be placed in 
 `/data`. It should comprise the following
@@ -32,7 +43,7 @@ files:
 The Reuters dataset is provided for example with the docker. 
 To install issue:
 ```bash
-docker run --rm -v $(pwd)/data:/data atnlp prep
+docker run --rm -v $(pwd)/data:/data wedavey/atnlp prep
 ```
 
 To use alternative datasets, convert them to the required 
@@ -42,22 +53,22 @@ that will be mounted to the docker image.
 
 ### Train models
 
-Run training
 ```bash
-docker run --rm -v $(pwd)/data:/data atnlp train 
-```
-
-Models can be specified by setting the `MODELS` environment variable, eg:  
-```bash
-docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data atnlp train 
+docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp train 
 ```
 
 ### Evaluate models
 
 ```bash
-docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data atnlp eval
+docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp eval
 ```
 
+
+### Predict topic labels
+
+```bash
+docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp eval
+```
 
 ## Authors
 

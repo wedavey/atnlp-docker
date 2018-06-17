@@ -3,10 +3,7 @@
 # RUN pip install keras --no-deps (or try conda equiv)
 
 TODO:
-* test deploy to docker
-* migrate to github ?
-* develop travis for auto deployment
-(companies can put any data-specific sensitive configuration in a separate data-preprocessing docker image)
+* develop travis for auto deployment?
 
 # Build
 # docker build -t atnlp .

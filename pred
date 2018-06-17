@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+INPUT=$1
+cd $(mktemp -d)
+for MODEL in ${MODELS}; do
+    predict.py ${DATADIR}/${MODEL}.pkl ${DATADIR}/${INPUT} -o pred_${MODEL}.txt
+done
+mv * ${DATADIR}

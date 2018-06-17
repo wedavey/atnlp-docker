@@ -57,18 +57,28 @@ that will be mounted to the docker image.
 docker run --rm -v $(pwd)/data:/data wedavey/atnlp train 
 ```
 
+The models are saved as `.pkl` files in the `/data` path.
+
 ### Evaluate models
 
 ```bash
 docker run --rm -v $(pwd)/data:/data wedavey/atnlp eval
 ```
 
+This produces an html report (`summary.html`) in the `/data` path.   
 
 ### Predict topic labels
+
+Predict topic labels for an input data file located in the `/data` path.
+Here we have used the test data set, while in production this 
+would typically be some unseen data.  
 
 ```bash
 docker run --rm -v $(pwd)/data:/data wedavey/atnlp pred data_test.txt
 ```
+
+This produces text files (`pred_<model name>.txt`) containing the 
+predictions in a one-hot format in the `/data` path. 
 
 ## Authors
 

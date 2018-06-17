@@ -1,4 +1,4 @@
-name: temp
+name: atnlp
 channels:
   - conda-forge
   - defaults
@@ -88,5 +88,5 @@ dependencies:
   - libgfortran=3.0.0=1
   - libstdcxx-ng=7.2.0=hdf63c60_3
   - pip:
-    - atnlp==0.0.9
-prefix: /usr/local/envs/temp
+    - atnlp==0.0.11
+prefix: /usr/local/envs/atnlp

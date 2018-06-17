@@ -67,7 +67,7 @@ docker run --rm -v $(pwd)/data:/data wedavey/atnlp eval
 ### Predict topic labels
 
 ```bash
-docker run --rm -v $(pwd)/data:/data wedavey/atnlp eval
+docker run --rm -v $(pwd)/data:/data wedavey/atnlp pred data_test.txt
 ```
 
 ## Authors

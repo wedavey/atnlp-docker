@@ -54,20 +54,20 @@ that will be mounted to the docker image.
 ### Train models
 
 ```bash
-docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp train 
+docker run --rm -v $(pwd)/data:/data wedavey/atnlp train 
 ```
 
 ### Evaluate models
 
 ```bash
-docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp eval
+docker run --rm -v $(pwd)/data:/data wedavey/atnlp eval
 ```
 
 
 ### Predict topic labels
 
 ```bash
-docker run --rm -e "MODELS=wordmatch svm" -v $(pwd)/data:/data wedavey/atnlp eval
+docker run --rm -v $(pwd)/data:/data wedavey/atnlp eval
 ```
 
 ## Authors
